@@ -1,0 +1,28 @@
+# herdr config - https://herdr.dev/docs/configuration/
+# Defaults are kept wherever possible. Only settings that differ from herdr's
+# defaults live here; run `herdr --default-config` to see everything else.
+
+# Skip the first-run setup flow; it already ran on this machine.
+onboarding = false
+
+[ui.toast]
+# Agent-status toasts pop over the pane content; the sidebar already shows state.
+delivery = "off"
+
+# ---- Keybindings ----
+# Each action keeps herdr's default binding first, then adds the tmux key from
+# ../tmux-config so existing muscle memory keeps working while learning herdr.
+# Listing an action here replaces its default, so the default must stay in the array.
+# Literal punctuation (`|`, `$`) is required; named forms like `pipe`/`dollar` are rejected.
+[keys]
+split_vertical = ["prefix+v", "prefix+|"]
+detach = ["prefix+q", "prefix+d"]
+rename_tab = ["prefix+shift+t", "prefix+comma"]
+rename_workspace = ["prefix+shift+w", "prefix+$"]
+# Prefix-free tab cycling from tmux (h/j = previous, k/l = next). Both modifier families are
+# bound so the same chords work in Ghostty and iTerm2: which one reaches herdr depends on the
+# terminal (Cmd needs the terminal to forward Super; Alt needs Option sent as Alt).
+previous_tab = ["prefix+p", "cmd+ctrl+h", "cmd+ctrl+j", "ctrl+alt+h", "ctrl+alt+j"]
+next_tab = ["prefix+n", "cmd+ctrl+k", "cmd+ctrl+l", "ctrl+alt+k", "ctrl+alt+l"]
+# Stands in for recon (`<prefix> a` in tmux): the Goto picker lists every agent with its status.
+goto = ["prefix+g", "prefix+a"]
