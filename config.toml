@@ -9,6 +9,10 @@ onboarding = false
 # Agent-status toasts pop over the pane content; the sidebar already shows state.
 delivery = "off"
 
+[ui.sound]
+# Agent-status sounds off; originally toggled from herdr's Settings UI.
+enabled = false
+
 # ---- Keybindings ----
 # Each action keeps herdr's default binding first, then adds the tmux key from
 # ../tmux-config so existing muscle memory keeps working while learning herdr.
