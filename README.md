@@ -42,6 +42,7 @@ Prefix is `Ctrl-b` (default). Below, `<p>` = `Ctrl-b`. Press `<p> ?` in herdr fo
 | Keys | Action |
 | --- | --- |
 | `<p> w` | Workspace picker |
+| `Cmd+Ctrl+k/j` or `Ctrl+Alt+k/j` | Previous / next workspace without prefix (up / down the sidebar) |
 | `<p> g` / `<p> a` *(tmux alias)* | Goto picker: every agent and terminal, with status |
 | `<p> N` | New workspace |
 | `<p> W` / `<p> $` *(tmux alias)* | Rename workspace |
@@ -55,8 +56,7 @@ Prefix is `Ctrl-b` (default). Below, `<p>` = `Ctrl-b`. Press `<p> ?` in herdr fo
 | --- | --- |
 | `<p> c` | New tab |
 | `<p> n` / `<p> p` | Next / previous tab |
-| `Cmd+Ctrl+k/l` or `Ctrl+Alt+k/l` *(tmux alias)* | Next tab without prefix |
-| `Cmd+Ctrl+h/j` or `Ctrl+Alt+h/j` *(tmux alias)* | Previous tab without prefix |
+| `Cmd+Ctrl+h/l` or `Ctrl+Alt+h/l` *(tmux alias)* | Previous / next tab without prefix |
 | `<p> 1` … `<p> 9` | Jump to tab by number |
 | `<p> T` / `<p> ,` *(tmux alias)* | Rename tab |
 | `<p> X` | Close tab |
