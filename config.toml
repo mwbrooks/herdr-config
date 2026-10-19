@@ -19,10 +19,14 @@ split_vertical = ["prefix+v", "prefix+|"]
 detach = ["prefix+q", "prefix+d"]
 rename_tab = ["prefix+shift+t", "prefix+comma"]
 rename_workspace = ["prefix+shift+w", "prefix+$"]
-# Prefix-free tab cycling from tmux (h/j = previous, k/l = next). Both modifier families are
-# bound so the same chords work in Ghostty and iTerm2: which one reaches herdr depends on the
-# terminal (Cmd needs the terminal to forward Super; Alt needs Option sent as Alt).
-previous_tab = ["prefix+p", "cmd+ctrl+h", "cmd+ctrl+j", "ctrl+alt+h", "ctrl+alt+j"]
-next_tab = ["prefix+n", "cmd+ctrl+k", "cmd+ctrl+l", "ctrl+alt+k", "ctrl+alt+l"]
+# Prefix-free navigation that follows herdr's layout: tabs run horizontally (h/l), workspaces
+# stack vertically in the sidebar (j/k). Adapted from tmux, where all four keys cycled windows.
+# Both modifier families are bound so the same chords work in Ghostty and iTerm2: which one
+# reaches herdr depends on the terminal (Cmd needs the terminal to forward Super; Alt needs
+# Option sent as Alt).
+previous_tab = ["prefix+p", "cmd+ctrl+h", "ctrl+alt+h"]
+next_tab = ["prefix+n", "cmd+ctrl+l", "ctrl+alt+l"]
+previous_workspace = ["cmd+ctrl+k", "ctrl+alt+k"]
+next_workspace = ["cmd+ctrl+j", "ctrl+alt+j"]
 # Stands in for recon (`<prefix> a` in tmux): the Goto picker lists every agent with its status.
 goto = ["prefix+g", "prefix+a"]
