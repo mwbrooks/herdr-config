@@ -4,7 +4,7 @@ Guidance for AI coding agents working in this repository.
 
 ## Repository purpose
 
-Personal [herdr](https://herdr.dev/) configuration, migrated from [tmux-config](https://github.com/mwbrooks/tmux-config). Two tracked artifacts: `config.toml` (the herdr config) and `install.sh` (the bootstrap, which symlinks `config.toml` to `~/.config/herdr/config.toml`).
+Personal [herdr](https://herdr.dev/) configuration, migrated from [tmux-config](https://github.com/mwbrooks/tmux-config). Tracked artifacts: `config.toml` (the herdr config), `install.sh` (the bootstrap, which symlinks `config.toml` to `~/.config/herdr/config.toml`), and `sort-spaces.sh` (sorts spaces alphabetically once via the socket API's `workspace.move_block`, since herdr has no sort setting).
 
 ## Common commands
 
@@ -13,7 +13,8 @@ Personal [herdr](https://herdr.dev/) configuration, migrated from [tmux-config](
 herdr config check           # validate config.toml and print diagnostics
 herdr server reload-config   # apply edits to a running herdr (or <prefix> R inside herdr)
 herdr --default-config       # print every setting with its default
-shellcheck install.sh        # only lint that applies; there is no test suite or build step
+./sort-spaces.sh             # sort spaces alphabetically (one-shot; re-run after adding spaces)
+shellcheck *.sh              # only lint that applies; there is no test suite or build step
 ```
 
 ## Architecture notes
@@ -28,7 +29,7 @@ shellcheck install.sh        # only lint that applies; there is no test suite or
 
 ## Conventions
 
-- `install.sh` runs under `set -euo pipefail`. Preserve that and quote expansions when editing.
+- Scripts run under `set -euo pipefail`. Preserve that and quote expansions when editing.
 - The script must remain idempotent.
 - Comments in `config.toml` document the *why* (which tmux habit a binding preserves, why a setting differs from default). Don't restate what a key obviously does.
 - Keep the README cheat sheet in sync with `config.toml`.

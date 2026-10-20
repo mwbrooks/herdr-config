@@ -100,6 +100,16 @@ Prefix is `Ctrl-b` (default). Below, `<p>` = `Ctrl-b`. Press `<p> ?` in herdr fo
 | `<p> s` | Settings |
 | `<p> R` | Reload config |
 
+## Sort spaces
+
+herdr has no setting to keep spaces sorted, and new spaces are added at the bottom. To sort them alphabetically (case-insensitive), run:
+
+```sh
+./sort-spaces.sh
+```
+
+It reorders the spaces once through herdr's socket API, so re-run it after adding spaces. Requires `jq` and `nc`, which ship with macOS.
+
 ## Uninstall
 
 ```sh
