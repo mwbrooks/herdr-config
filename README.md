@@ -23,6 +23,13 @@ It's idempotent - re-run any time.
 
 - [herdr](https://herdr.dev/docs/install/)
 
+## Terminal setup
+
+The prefix-free tab and workspace keys are bound twice, because which chord reaches herdr depends on the terminal:
+
+- **Ghostty:** use `Cmd+Ctrl+h/j/k/l`.
+- **iTerm2:** use `Ctrl+Option+h/j/k/l`. iTerm2 doesn't forward Cmd chords, and Option only works as Alt after setting **Settings → Profiles → Keys → General → Left Option key** to **Esc+**.
+
 ## tmux -> herdr
 
 | tmux | herdr |
